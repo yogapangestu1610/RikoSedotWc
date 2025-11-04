@@ -1,0 +1,1035 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+/* navbar section */
+nav.navbar {
+  background-color: #003060;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  border-bottom: 0.6rem solid #808080;
+}
+
+nav.navbar .logo {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  color: #68bbe3;
+  margin-left: 2rem;
+  text-shadow: -0.7px 0.7px 0px #dfe0e0, -1.5px 1.5px 0px #d7d8d8;
+}
+
+nav.navbar .ham-menu i {
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar .navbar-nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+nav.navbar #ham-menu {
+  display: none;
+}
+
+nav.navbar .navbar-nav a {
+  color: #0e86d4;
+  font-family: "Titillium Web", sans-serif;
+  margin: 0 1rem;
+}
+
+nav.navbar .navbar-nav a:hover {
+  color: #fff;
+  border-bottom: 0.5px solid #fff;
+}
+
+.buttontoUp {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9999;
+}
+
+button#scrollToTopBtn {
+  width: 20px;
+  height: 20px;
+  background-color: #808080;
+  color: #dfe0e0;
+  position: fixed;
+  bottom: 10px;
+  display: none;
+  border: 1.3px solid white;
+  border-radius: 30px;
+}
+
+/* navbar section */
+
+/* img section */
+
+.container-img .img {
+  min-height: 110vh;
+  background-image: url(img/BG1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-img .img h3 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+.container-img .img .button-wrp {
+  position: relative;
+}
+
+.container-img .img .button-wrp button {
+  position: absolute;
+  top: 4rem;
+  right: 11rem;
+  width: 5rem;
+  background-color: #003060;
+  color: #fff;
+  border: 1.4px solid #fff;
+  display: inline-block;
+}
+/* img section */
+
+/* service1 section */
+
+/* Section */
+.service {
+  background: linear-gradient(180deg, #e6f7ff 0%, #cce7f0 100%);
+
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 20px;
+  background: #003060;
+  border-radius: 0px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+}
+
+/* Judul kiri */
+.service-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  white-space: nowrap;
+}
+
+/* Container teks berjalan */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  height: 2.4rem;
+}
+
+/* Teks berjalan */
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: marqueeMove 12s linear infinite;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Efek animasi jalan */
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .service-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .marquee-text {
+    font-size: 1rem;
+  }
+}
+
+/* Card Container */
+.row-service {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Card Styling */
+.service-card {
+  background: linear-gradient(145deg, #009fb3, #006d7a);
+  color: white;
+  width: 260px;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+              inset 0 2px 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Efek Hover 3D */
+.service-card:hover {
+  transform: translateY(-10px) rotateX(6deg) rotateY(-3deg) scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 123, 143, 0.4),
+              inset 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Icon */
+.service-card i {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #fff;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Efek Glow pada Icon saat Hover */
+.service-card:hover i {
+  transform: scale(1.2) rotate(8deg);
+  color: #ffd700;
+}
+
+/* Title */
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Text */
+.service-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Animasi Card Masuk dari Bawah */
+.service-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 40px;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .row-service {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 90%;
+  }
+}
+
+
+/* .service .row-service .service-card {
+  text-align: center;
+  border: 0.5px solid #000;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+} */
+
+/* about section */
+
+.container-abt {
+  position: relative;
+}
+
+.container-abt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 5%;
+  background-color: #f5faff;
+  flex-wrap: wrap;
+}
+
+/* Bagian gambar di kiri */
+.container-abt .img-abt {
+  background-image: url("img/BG2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 110vh;
+  border-radius: 30px;
+  opacity: 0.9;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Bagian teks di kanan */
+.container-abt .cover-abt {
+  width: 45%;
+  min-height: 50vh;
+  background-color: #003060;
+  border: 2px solid #808080;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;   
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul */
+.container-abt .cover-abt h3 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.2rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+/* Deskripsi */
+.container-abt .cover-abt p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .container-abt {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-abt .img-abt,
+  .container-abt .cover-abt {
+    width: 90%;
+    height: auto;
+  }
+}
+
+footer.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #003060;
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1.8rem;
+  color: #dfe0e0;
+}
+
+footer.footer .container-footer {
+  margin-bottom: 1.2rem;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+}
+
+footer.footer .container-footer a {
+  font-size: 1.3rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  color: #68bbe3;
+  margin-left: 2rem;
+  text-shadow: -0.7px 0.7px 0px #dfe0e0, -1.5px 1.5px 0px #d7d8d8;
+}
+
+footer.footer .row-footer,
+.row-sosials {
+  text-align: left;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  text-align: justify;     
+}
+footer.footer .row-footer .contact-service,
+.row-sosials .sosials {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  box-sizing: border-box;
+}
+footer.footer .row-footer .contact-service a,
+.sosials a {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+footer.footer .row-footer .contact-service h4,
+.row-sosials .sosials h4.sosials {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1rem;
+  display: inline-block;
+  
+}
+
+footer.footer .row-footer .contact-service a p,
+.row-sosials .sosials a p {
+  display: inline;
+  position: relative;
+  bottom: 0.6rem;
+}
+
+footer.footer .row-maps {
+  display: flex;
+}
+
+footer.footer .row-maps iframe {
+  width: 40vw;
+  height: 14vw;
+  margin-left: 3rem;
+}
+
+/* service section */
+@media screen and (max-width: 500px) {
+  nav.navbar {
+    flex-wrap: wrap;
+  }
+
+  nav.navbar .logo {
+    margin-left: 0.7rem;
+  }
+
+  nav.navbar #ham-menu {
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav.navbar {
+    position: relative;
+    padding: 1.4rem;
+  }
+
+  nav.navbar .navbar-nav {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -300px;
+    right: 0;
+    background-color: #003060;
+    padding: 0.5rem 0;
+  }
+
+  nav.navbar .navbar-nav a:hover {
+    color: #fff;
+    border-bottom: 0.5px solid #fff;
+  }
+
+  nav.navbar .navbar-nav.show {
+    top: 70px;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+  }
+
+  button#scrollToTopBtn {
+    display: block;
+    margin-right: 0.7rem;
+  }
+
+  .container-img {
+    margin-top: 1.5rem;
+  }
+
+  .container-img .img {
+    background-size: contain;
+    position: relative;
+  }
+
+  .container-img .img h3 {
+    position: absolute;
+    top: 10%;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+  }
+
+  .container-img .img .button-wrp {
+    position: relative;
+  }
+
+  .container-img .img .button-wrp button {
+    position: absolute;
+    top: -13rem;
+    left: -2.5rem;
+  }
+
+  .service {
+    position: relative;
+    bottom: 26rem;
+    margin-bottom: -20rem;
+  }
+
+  .service .row-service {
+    display: flex;
+    flex-direction: column;
+    transform: scaleX(0.7);
+    margin-top: 2rem;
+  }
+
+  .container-abt .img-abt .cover-abt {
+    width: 87vw;
+    height: 37vh;
+  }
+
+  .container-abt .img-abt .cover-abt p {
+    top: 1.8rem;
+  }
+
+  .container-abt .img-abt .cover-abt h3,
+  p {
+    transform: scale(0.8);
+  }
+
+  footer.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0e86d4;
+    width: 100vw;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  footer.footer .row-maps iframe {
+    width: 90vw;
+    height: 28vw;
+    margin: 30px auto;
+  }
+}
+
+/* Layanan  */
+
+/* 🌊 BAGIAN UTAMA SERVICE SECTION */
+.service2 {
+  background-color: #e6f4ff;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Judul Layanan */
+.service2-title {
+  margin: 0.8rem 0;
+  padding: 0.3rem 0.4rem;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  display: block;
+  background-color: #003060;
+  color: #dfe0e0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 0;
+  line-height: 1.4;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInTitle 1.2s ease forwards;
+  text-transform: uppercase;
+}
+
+/* ✨ Nomor HP muncul di bawah judul */
+.service2-title::after {
+  content: "Hubungi Kami: 085727522091";
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffd700;
+  margin-top: 0.2rem;
+  animation: fadeInPhone 1.8s ease 0.8s forwards;
+  opacity: 0;
+}
+
+/* 🔥 Animasi muncul judul */
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes fadeInPhone {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌈 Efek garis cahaya berjalan */
+.service2-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shineMove 3s infinite;
+}
+
+@keyframes shineMove {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* 🔹 Row layanan */
+.row-service2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* 🌟 CARD STYLE */
+.service-card2 {
+  background: #ffffff;
+  width: 280px;
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+/* Hover efek 3D */
+.service-card2:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(3deg);
+  box-shadow: 0 20px 40px rgba(0, 92, 115, 0.4);
+}
+
+/* 🖼️ Gambar */
+.img-box2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom gambar saat hover */
+.service-card2:hover .img-box2 img {
+  transform: scale(1.1);
+}
+
+/* 💬 Overlay info card (tersembunyi di awal) */
+.info-card2 {
+  position: absolute;
+  bottom: -120px; /* 🔹 disembunyikan lebih dalam */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007b8f;
+  color: white;
+  width: 85%;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease;
+  z-index: 5;
+  opacity: 0.9;
+}
+
+/* Saat hover muncul naik */
+.service-card2:hover .info-card2 {
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* 🔹 Icon */
+.info-card2 i {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Sedikit gerak saat hover */
+.service-card2:hover .info-card2 i {
+  transform: translateY(-3px);
+}
+
+/* Judul dan teks */
+.info-card2 h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.info-card2 p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 📱 Responsif */
+@media (max-width: 768px) {
+  .row-service2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card2 {
+    width: 85%;
+    height: 360px;
+  }
+
+  .info-card2 {
+    width: 90%;
+  }
+}
+
+
+/* Tombol WhatsApp */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc5b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn i {
+  font-size: 20px;
+  position: relative;
+   top: 5px; /*Geser ikon sedikit ke bawah */
+}
+
+.whatsapp-btn-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn-price:hover {
+  background-color: #1ebc5b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn-price i {
+  font-size: 20px;
+  position: relative;
+}
+
+
+
+/* Judul Daftar Harga */
+.price-title {
+  text-align: center;
+  color: #003060;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  letter-spacing: 1px;
+  margin: 1rem auto -2rem auto; /* 🔹 Jarak atas-bawah disesuaikan */
+  width: fit-content;
+  position: relative;
+  animation: floatUp 2s ease-in-out infinite, glowText 3s ease-in-out infinite;
+}
+
+/* 🔹 Animasi naik turun lembut */
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* 🔹 Animasi efek cahaya lembut */
+@keyframes glowText {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(0, 48, 96, 0.2),
+                 0 0 15px rgba(0, 48, 96, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(0, 70, 140, 0.5),
+                 0 0 25px rgba(0, 80, 160, 0.6);
+  }
+}
+
+
+
+/* Container Card Harga */
+.row-price {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Card Harga */
+.price-card {
+  background: linear-gradient(145deg, #007b8f, #00667a);
+  color: white;
+  width: 260px;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  transform: translateY(0);
+  animation: fadeInCard 1.2s ease;
+}
+
+/* Animasi hover */
+.price-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Isi Card */
+.price-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.price-amount {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.price-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Animasi */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Judul Galeri */
+.galeri-title {
+  text-align: center;
+  color: #003060;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  letter-spacing: 1px;
+  margin: 1.5rem auto 1rem auto;
+  width: fit-content;
+  animation: fadeInDown 1s ease;
+  text-transform: uppercase;
+}
+
+/* Grid Galeri */
+.row-galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Card Foto */
+.galeri-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  transform: translateY(0);
+}
+
+/* Efek Hover */
+.galeri-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Gambar */
+.galeri-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Efek zoom halus pada hover */
+.galeri-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Animasi muncul */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a.tiktok-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* 🔹 Jarak antara ikon dan teks */
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+a.tiktok-link i {
+  font-size: 22px;
+  position: relative;
+  top: 1px; /* 🔹 Menurunkan ikon sedikit agar sejajar teks */
+}
+
+a.tiktok-link p {
+  margin: 0;
+  position: relative;
+  top: 2px; /* 🔹 Menurunkan teks sedikit agar lebih seimbang */
+}
+
+a.tiktok-link:hover {
+  color: #ffd700; /* 🔹 Warna khas TikTok saat hover */
+  transform: translateY(-2px);
+}
+
