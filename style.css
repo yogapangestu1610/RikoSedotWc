@@ -293,18 +293,9 @@ button#scrollToTopBtn {
     width: 90%;
   }
 }
+/* end section 1 */
 
-
-/* .service .row-service .service-card {
-  text-align: center;
-  border: 0.5px solid #000;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-} */
-
-/* about section */
-
+/* section tentang kami*/
 .container-abt {
   position: relative;
 }
@@ -376,6 +367,7 @@ button#scrollToTopBtn {
     height: auto;
   }
 }
+/* End Tentang Kami */
 
 footer.footer {
   display: flex;
@@ -568,7 +560,7 @@ footer.footer .row-maps iframe {
   }
 }
 
-/* Layanan  */
+/* Layanan Kami */
 
 /* 🌊 BAGIAN UTAMA SERVICE SECTION */
 .service2 {
@@ -771,7 +763,6 @@ footer.footer .row-maps iframe {
   }
 }
 
-
 /* Tombol WhatsApp */
 .whatsapp-btn {
   display: inline-flex;
@@ -825,10 +816,10 @@ footer.footer .row-maps iframe {
   font-size: 20px;
   position: relative;
 }
+/* End Layanan Kami */
 
 
-
-/* Judul Daftar Harga */
+/* Harga Layanan */
 .price-title {
   text-align: center;
   color: #003060;
@@ -938,6 +929,62 @@ footer.footer .row-maps iframe {
   }
 }
 
+/* Tombol WhatsApp Harga Layanan */
+.whatsapp-btn-p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn-p:hover {
+  background-color: #1ebc5b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn-p i {
+  font-size: 20px;
+  position: relative;
+   /*Geser ikon sedikit ke bawah */
+}
+
+.whatsapp-btn-price-p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn-price-p:hover {
+  background-color: #1ebc5b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn-price-p i {
+  font-size: 20px;
+  position: relative;
+}
+
+/* End Harga Layanan */
+
 /* Judul Galeri */
 .galeri-title {
   text-align: center;
@@ -1003,6 +1050,7 @@ footer.footer .row-maps iframe {
     transform: translateY(0);
   }
 }
+/* End Galeri */
 
 a.tiktok-link {
   display: inline-flex;
@@ -1033,3 +1081,93 @@ a.tiktok-link:hover {
   transform: translateY(-2px);
 }
 
+/* =============================== */
+/* 🔧 PERBAIKAN RESPONSIVE TAMPAK HP */
+/* =============================== */
+
+/* Untuk layar sedang (tablet) */
+@media (max-width: 992px) {
+  /* Gambar di Home */
+  .service img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Section Tentang Kami */
+  .container-abt {
+    flex-direction: column;
+    padding: 2rem 5%;
+  }
+
+  .container-abt .img-abt {
+    width: 100%;
+    height: 60vh; /* Biar gak tinggi banget */
+    border-radius: 20px;
+  }
+
+  .container-abt .cover-abt {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 20px;
+  }
+}
+
+/* Untuk layar kecil (HP) */
+@media (max-width: 600px) {
+  /* Semua gambar utama */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Home Section */
+  .row-service {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  /* Layanan Kami */
+  .row-price {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  /* Galeri */
+  .row-galeri {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+  }
+
+  .galeri-item img {
+    height: 160px;
+  }
+
+  /* Tentang Kami */
+  .container-abt .img-abt {
+    width: 100%;
+    height: 45vh;
+  }
+
+  .container-abt .cover-abt {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Judul Galeri & Harga */
+  .price-title,
+  .galeri-title {
+    font-size: 1.4rem;
+  }
+}
