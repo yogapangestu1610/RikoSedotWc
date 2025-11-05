@@ -1087,14 +1087,14 @@ a.tiktok-link:hover {
 
 /* Untuk layar sedang (tablet) */
 @media (max-width: 992px) {
-  /* Gambar di Home */
+  /* 🔹 Gambar di Home */
   .service img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
 
-  /* Section Tentang Kami */
+  /* 🔹 Section Tentang Kami */
   .container-abt {
     flex-direction: column;
     padding: 2rem 5%;
@@ -1111,39 +1111,63 @@ a.tiktok-link:hover {
     margin-top: 1.5rem;
     border-radius: 20px;
   }
+
+  /* 🔹 Home (Service) Card */
+  .row-service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 45%; /* 2 card per baris di tablet */
+  }
+
+  /* 🔹 Layanan Kami (Price) Card */
+  .row-price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .price-card {
+    width: 45%; /* 2 card per baris di tablet */
+  }
 }
 
 /* Untuk layar kecil (HP) */
 @media (max-width: 600px) {
-  /* Semua gambar utama */
+  /* 🔹 Semua gambar utama */
   img {
     max-width: 100%;
     height: auto;
   }
 
-  /* Home Section */
+  /* 🔹 Home Section */
   .row-service {
     flex-direction: column;
     align-items: center;
   }
 
   .service-card {
-    width: 90%;
+    width: 90%; /* 1 card per baris di HP */
     margin-bottom: 1rem;
   }
 
-  /* Layanan Kami */
+  /* 🔹 Layanan Kami */
   .row-price {
     flex-direction: column;
     align-items: center;
   }
 
   .price-card {
-    width: 90%;
+    width: 90%; /* 1 card per baris di HP */
     margin-bottom: 1rem;
   }
 
-  /* Galeri */
+  /* 🔹 Galeri */
   .row-galeri {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 15px;
@@ -1153,7 +1177,7 @@ a.tiktok-link:hover {
     height: 160px;
   }
 
-  /* Tentang Kami */
+  /* 🔹 Tentang Kami */
   .container-abt .img-abt {
     width: 100%;
     height: 45vh;
@@ -1165,7 +1189,7 @@ a.tiktok-link:hover {
     font-size: 1rem;
   }
 
-  /* Judul Galeri & Harga */
+  /* 🔹 Judul Galeri & Harga */
   .price-title,
   .galeri-title {
     font-size: 1.4rem;
